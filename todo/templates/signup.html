@@ -1,0 +1,60 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>FORM</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="sign-up-heading">
+        What are you still <br />
+        waiting for!
+      </h1>
+      <div class="submit_login">
+        <form class="submit" action="" method="post">
+          {% csrf_token %}
+          <div class="email field">
+            <b>email</b>
+            <input
+              type="email"
+              placeholder="aria@gmail.com"
+              name="email"
+              required
+            />
+          </div>
+
+          <div class="firstname field">
+            <b>firstname</b>
+            <input
+              type="text"
+              placeholder="first-name"
+              name="first-name"
+              required
+            />
+          </div>
+
+          <div class="surname field">
+            <b>surname</b>
+            <input type="text" placeholder="surname" name="surname" required />
+          </div>
+
+          <div class="field">
+            <b>password</b>
+            <input type="password" class="inp" required name="password" />
+          </div>
+
+          <div class="field">
+          
+              <a class="anc" href="/login">  <b
+              >already have an account <br />
+              </b></a
+          </div>
+          <button class="submit-btn">submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
